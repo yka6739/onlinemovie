@@ -1,0 +1,21 @@
+﻿
+<div class="individual-movie-container">
+    <img src=@D2.Poster />
+    <div class="individual-movie-container p">
+        <p>@D2.Titlebrief</p>
+        <p>@D2.StartingDate</p>
+    </div>
+   
+<div>
+    <a class="btn btn-info">Edit</a>
+    <button type="button" class="btn btn-danger" @onclick="(()=>Delete.InvokeAsync(D2))">Delete</button>
+
+</div>
+        
+</div>
+
+
+@code {
+    [Parameter] public Data D2 { get; set; }
+    [Parameter] public EventCallback<Data> Delete { get; set; }
+}
